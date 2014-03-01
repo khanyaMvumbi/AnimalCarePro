@@ -9,7 +9,6 @@ package cput.designprinceplespro.Service.LSP.Correction;
 import cput.designprinceplespro.Service.Encapsulation.Correction.AnimalCorrection;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -17,45 +16,44 @@ import java.util.Map;
  * @author Khanya
  */
 public class LSPCorrection extends AnimalCorrection  {
-    private List <AnimalCorrection> l = new ArrayList<>();
     private Map <Integer, String> m = new HashMap<>();  
-    private LSPCorrection lsp;
+    private static  AnimalCorrection lsp;
     
     public void AddAnimal()
     {
         m.put(1, "Bruce");
-        m.put(1, "3");
-        m.put(1, "Dog");
-        m.put(1, "Anele");
-        m.put(1, "black");        
+        m.put(2, "3");
+        m.put(3, "Dog");
+        m.put(4, "Anele");
+        m.put(5, "black");        
         lsp = (LSPCorrection) new AnimalCorrection(m);
         
         m.put(1, "Williams");
-        m.put(1, "6");
-        m.put(1, "Dog");
-        m.put(1, "Skit");
-        m.put(1, "black");
+        m.put(2, "6");
+        m.put(3, "Dog");
+        m.put(4, "Skit");
+        m.put(5, "black");
         lsp = (LSPCorrection) new AnimalCorrection(m);
         
         m.put(1, "Darlington");
-        m.put(1, "5");
-        m.put(1, "Cat");
-        m.put(1, "Susan");
-        m.put(1, "black");
+        m.put(2, "5");
+        m.put(3, "Cat");
+        m.put(4, "Susan");
+        m.put(5, "black");
         lsp = (LSPCorrection) new AnimalCorrection(m);
         
         m.put(1, "Meow");
-        m.put(1, "2");
-        m.put(1, "Cat");
-        m.put(1, "bryan");
-        m.put(1, "White");
+        m.put(2, "2");
+        m.put(3, "Cat");
+        m.put(4, "bryan");
+        m.put(5, "White");
         lsp = (LSPCorrection) new AnimalCorrection(m);
         
         m.put(1, "Sting");
-        m.put(1, "3");
-        m.put(1, "Dog");
-        m.put(1, "allen");
-        m.put(1, "black");
+        m.put(2, "3");
+        m.put(3, "Dog");
+        m.put(4, "allen");
+        m.put(5, "black");
         lsp = (LSPCorrection) new AnimalCorrection(m);
         
     }

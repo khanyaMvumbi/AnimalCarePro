@@ -22,8 +22,7 @@ public class LSPViolation {
     private List <AnimalViolation> l = new ArrayList<>();
     private Map <Integer, String> m = new HashMap<>();  
     public void addAnimal()
-    {
-        
+    {        
         m.put(1, "Bruce");
         m.put(1, "3");
         m.put(1, "Dog");

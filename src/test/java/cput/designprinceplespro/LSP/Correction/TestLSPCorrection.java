@@ -7,6 +7,9 @@
 package cput.designprinceplespro.LSP.Correction;
 
 import cput.designprinceplespro.Service.Encapsulation.Correction.AnimalCorrection;
+import cput.designprinceplespro.Service.LSP.Correction.LSPCorrection;
+import java.util.HashMap;
+import java.util.Map;
 import org.junit.Assert;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -29,18 +32,24 @@ public class TestLSPCorrection {
     // The methods must be annotated with annotation @Test. For example:
     //
     private static AnimalCorrection corre;
-    
+    private Map <Integer, String> m = new HashMap<Integer, String>();
      @Test
      public void testAddAnimal() {
-     
-         Assert.assertEquals(corre.getName(), "Bruce","Succes");
+         
+        m.put(1, "Bruce");
+        m.put(2, "3");
+        m.put(3, "Dog");
+        m.put(4, "Anele");
+        m.put(5, "black");    
+        corre = new AnimalCorrection(m);
+         Assert.assertEquals("Good", "Bruce", corre.getName());
          
      }
 
     @BeforeClass
     public static void setUpClass() throws Exception {
-        ApplicationContext ctx = new AnnotationConfigApplicationContext(AnimalCorrection.class);
-        corre = (AnimalCorrection) ctx.getBean("LSPCorrection");
+        ApplicationContext ctx = new AnnotationConfigApplicationContext(LSPCorrection.class);
+        corre = (LSPCorrection) ctx.getBean("LSPCorrection");
     }
 
     @AfterClass

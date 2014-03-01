@@ -13,7 +13,7 @@ import java.util.Map;
  *
  * @author Khanya
  */
-public class AnimalViolation implements AnimalCare{
+public class AnimalViolation {
  private String name;
  private String PetsOwner;
  private int age;
